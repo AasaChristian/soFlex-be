@@ -5,6 +5,7 @@ const Port = process.env.PORT || 5000;
 const cors = require('cors')
 const Users = require('./routers/user-router')
 const Exercises = require('./routers/exercises-router')
+const Regimen = require('./routers/regimens-router')
 
 
 server.listen(Port, () => {
@@ -21,6 +22,7 @@ app.use(express.json());
 
 app.use('/api/users', Users);
 app.use('/api/exercises', Exercises);
+app.use('/api/regimen', Regimen)
 
 app.get("/", (req, res) => {
   res.send({ response: "I am alive" }).status(200);
