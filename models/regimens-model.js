@@ -9,7 +9,11 @@ module.exports ={
 };
 
 function findByuserId(userId){
-    return db("regimens").where({userId})
+    return db("regimens as r")
+    .where({userId})
+    .join("exercises as e", "e.id", "r.exerciseId")
+    .join("users as u", "u.id", "r.userId")
+    .select("r.id as regimenID", "r.weight as regimenWeight", "*" )
      
 }
 

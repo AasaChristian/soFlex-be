@@ -10,14 +10,16 @@ const Regimen = require('../Models/regimens-model');
 
 router.get('/find/:id', (req, res) => {
     let userId = req.params.id
-
+console.log("running")
 
     Regimen.findByuserId(userId)
     .then(found => {
+      console.log("here")
         if (!found){
         res.status(400).json({message:`User has no regimen`})  
         }
         res.status(200).json(found)
+        console.log(found)
     })
     .catch(err => {
         console.log(err,"catch")
@@ -39,6 +41,8 @@ router.post('/add', (req, res) => {
 });
 
 router.put('/update/:id', (req, res) => {
+
+  console.log(req.body,"body")
   let { name, link, userId, exerciseId, sets, reps, weight, completion} = req.body;
   let id = req.params.id
   const updateObj = {
