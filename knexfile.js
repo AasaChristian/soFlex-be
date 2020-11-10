@@ -1,6 +1,5 @@
 // Update with your config settings.
 
-const postgresql = require('pg')
 
 module.exports = {
 
