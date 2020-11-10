@@ -2,7 +2,7 @@
 const router = require('express').Router();
 
 
-const Users = require('../Models/users-model');
+const Users = require('../Models/users-model.js');
 
 // for endpoints beginning with /api/auth
 router.post('/register', (req, res) => {
