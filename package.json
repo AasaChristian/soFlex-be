@@ -2,7 +2,7 @@
   "name": "soflex-be",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "\u001b[D\u001b[app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon app.js",
