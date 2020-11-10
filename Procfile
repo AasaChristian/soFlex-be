@@ -1,1 +1,1 @@
-web: knex migrate:rollback && knex migrate:latest && node App.js
+web: knex migrate:rollback && knex migrate:latest && node app.js
